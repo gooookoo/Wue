@@ -25,9 +25,6 @@
         }
 
         WueComponent.prototype.observe = function (data, path = "") {
-            if (typeof data !== "object" || data === null) {
-                throw new TypeError("data must be an object");
-            }
             const self = this;
             if (!data || Object.prototype.toString.call(data) !== "[object Object]") {
                 return;
